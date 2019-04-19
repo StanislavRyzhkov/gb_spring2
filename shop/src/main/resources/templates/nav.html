@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru-RU">
+    <nav th:fragment="navi(cartSize)" class="custom-color">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a th:href="@{'/'}">ГЛАВНАЯ</a></li>
+                <li><a th:href="@{'/'}">О НАС</a></li>
+                <li><a th:href="@{'/'}">КОНТАКТЫ</a></li>
+                <li><a th:href="@{'/cart'}" th:text="'Корзина: ' + ${cartSize}"></a></li>
+            </ul>
+        </div>
+    </nav>
+</html>

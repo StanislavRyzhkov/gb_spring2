@@ -1,0 +1,46 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{'/css/materialize.css'}">
+    <link rel="stylesheet" th:href="@{'/css/style.css'}">
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div th:replace="~{nav :: navi(${cartSize})}"></div>
+        <div th:replace="~{mobile-nav :: mobile-navi}"></div>
+        <h1 class="text-center">Каталог товаров</h1>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="image-card-wrapper-padding col s12 m6 l3" th:each="product : ${products}">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" th:src="@{'/media/small_photos/' + ${product.mainImage}}" alt="photo">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">[[${product.price}]]<i class="material-icons right">more_vert</i></span>
+                            <p><a th:text="${product.name}" th:href="@{'/products/' + ${product.vendorCode}}"></a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span th:text="${product.name}" class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                            <p th:text="${product.description}"></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div th:replace="~{footer :: footer}"></div>
+    <script th:src="@{'/js/materialize.js'}"></script>
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+</html>
