@@ -1,3 +1,15 @@
 
 hw1/.idea
 .DS_Store
+shop/.idea
+shop/.mvn
+shop/media
+shop/mvnw
+shop/shop.iml
+shop/target
+shop/HELP.md
+shop/mvnw.cmd
+shop_hw5/media
+shop_hw5/.mvn
+shop_hw5/mvnw
+shop_hw5/mvnw.cmd

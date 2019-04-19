@@ -1,0 +1,29 @@
+
+.wrapper {
+    min-height: calc(100vh - 150px);
+}
+
+.custom-color {
+    background: #388E3C;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.image-card-wrapper-padding {
+    padding: 10px;
+}
+
+.custom-button-color {
+    background: #795548;
+}
+
+.custom-button-color:hover {
+    background: #1a237e;
+}
+
+footer {
+    height: 150px;
+    background: #757575;
+}
