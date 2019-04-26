@@ -1,3 +1,7 @@
 
 hw1/.idea
 .DS_Store
+shop/media/
+shop/.mvn/
+shop/mvnw
+shop/mvnw.cmd
