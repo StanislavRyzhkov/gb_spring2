@@ -13,3 +13,9 @@ shop/media/
 shop/.mvn/
 shop/mvnw
 shop/mvnw.cmd
+shop_hw6/.mvn
+shop_hw6/media
+shop_hw6/mvnw
+shop_hw6/mvnw.cmd
+shop_hw6/src/main/resources/static/css
+shop_hw6/src/main/resources/static/js

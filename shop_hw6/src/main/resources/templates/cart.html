@@ -1,0 +1,54 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{'/css/materialize.css'}">
+    <link rel="stylesheet" th:href="@{'/css/style.css'}">
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div th:replace="~{nav :: navi(${cartSize})}"></div>
+        <div th:replace="~{mobile-nav :: mobile-navi}"></div>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2">
+                        <table th:if="${items.size() > 0}">
+                            <thead>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Категория</th>
+                                <th>Цена</th>
+                                <th>Количество</th>
+                                <th>Стоимость</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr th:each="item : ${items}">
+                                <td th:text="${item.product.name}"></td>
+                                <td th:text="${item.product.category}"></td>
+                                <td th:text="${item.itemPrice}"></td>
+                                <td th:text="${item.quantity}"></td>
+                                <td th:text="${item.totalPrice}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h4 th:if="${items.size() > 0}" th:text="${totalCost}"></h4>
+                        <h4 th:unless="${items.size() > 0}">Корзина пуста</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div th:replace="~{footer :: footer}"></div>
+    <script th:src="@{'/js/materialize.js'}"></script>
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+</html>
