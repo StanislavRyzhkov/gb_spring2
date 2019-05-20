@@ -30,3 +30,6 @@ shop_hw7/src/main/resources/static/css/materialize.css
 shop_hw7/src/main/resources/static/css/materialize.min.css
 shop_hw7/src/main/resources/static/js/materialize.js
 shop_hw7/src/main/resources/static/js/materialize.min.js
+filebox/.mvn
+filebox/mvnw
+filebox/mvnw.cmd
